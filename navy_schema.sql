@@ -12,22 +12,22 @@ CREATE TABLE fleets (
 CREATE TABLE ships (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(50) NOT NULL,
-  date_built DATETIME NOT NULL,
+  date_built DATE NOT NULL,
   fleet_id INTEGER NOT NULL REFERENCES fleets(id) 
 );
 
 CREATE TABLE sailors (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(50) NOT NULL,
-  date_of_birth DATE NOT NULL,
-)
+  date_of_birth DATE NOT NULL
+);
 
 CREATE TABLE tours (
   id SERIAL PRIMARY KEY NOT NULL,
   shipid INTEGER NOT NULL REFERENCES ships(id),
   sailorid INTEGER NOT NULL REFERENCES sailors(id),
   duty VARCHAR(50) NOT NULL,
-  tour_start DATETIME NOT NULL,
-  tour_end DATETIME NOT NULL,
+  tour_start DATE NOT NULL,
+  tour_end DATE NOT NULL,
   rank varchar(30)
 );
