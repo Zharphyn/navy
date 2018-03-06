@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gist.github.com/965c873f2af05d4ad0be2757281d5dc1"
   },
-  "homepage": "https://gist.github.com/965c873f2af05d4ad0be2757281d5dc1"
+  "homepage": "https://gist.github.com/965c873f2af05d4ad0be2757281d5dc1",
+  "dependencies": {
+    "pg": "^7.4.1"
+  }
 }
